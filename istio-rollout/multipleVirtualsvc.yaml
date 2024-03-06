@@ -43,10 +43,10 @@ spec:
     - destination:
         host: rollouts-demo-stable
         port:
-          number: 15373
+          number: 80
       weight: 100
     - destination:
         host: rollouts-demo-canary
         port:
-          number: 15373
+          number: 80
       weight: 0
