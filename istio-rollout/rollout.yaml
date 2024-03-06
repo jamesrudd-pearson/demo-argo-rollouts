@@ -14,9 +14,6 @@ spec:
           - name: rollouts-demo-vsvc1 # At least one virtualService is required
             routes:
             - primary # At least one route is required
-          - name: rollouts-demo-vsvc2
-            routes:
-            - secondary # At least one route is required
       steps:
       - setWeight: 50
       - pause: {}
