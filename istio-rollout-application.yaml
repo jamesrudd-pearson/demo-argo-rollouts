@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: 'istio-rollout'
+spec:
+  destination:
+    namespace: istio-rollout
+    name: in-cluster
+  source:
+    repoURL: 'https://github.com/jamesrudd-pearson/demo-argo-rollouts.git'
+    path: istio-rollout
+    targetRevision: HEAD
+  project: 'default'
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true

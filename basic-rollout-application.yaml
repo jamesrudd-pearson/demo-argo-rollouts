@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: 'basic-rollout'
+spec:
+  destination:
+    namespace: basic-rollout
+    name: in-cluster
+  source:
+    repoURL: 'https://github.com/jamesrudd-pearson/demo-argo-rollouts.git'
+    path: basic-rollout
+    targetRevision: HEAD
+  project: 'default'
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
