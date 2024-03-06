@@ -4,7 +4,7 @@ metadata:
   name: rollout-bluegreen-active
 spec:
   ports:
-  - port: 80
+  - port: 8080
     targetPort: http
     protocol: TCP
     name: http
@@ -17,7 +17,7 @@ metadata:
   name: rollout-bluegreen-preview
 spec:
   ports:
-  - port: 80
+  - port: 8080
     targetPort: http
     protocol: TCP
     name: http
