@@ -6,4 +6,4 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "-2"
   labels:
-    istio-injection: enabled
+    istio-injection: disabled
