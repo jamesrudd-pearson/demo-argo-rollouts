@@ -9,6 +9,9 @@ spec:
   - rollouts-demo-vsvc1.local
   http:
   - name: primary
+    match:
+    - uri:
+        prefix: /
     route:
     - destination:
         host: rollouts-demo-stable
@@ -33,6 +36,9 @@ spec:
   - rollouts-demo-vsvc2.local
   http:
   - name: secondary
+    match:
+    - uri:
+        prefix: /
     route:
     - destination:
         host: rollouts-demo-stable
