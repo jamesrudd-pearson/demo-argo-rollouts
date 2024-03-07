@@ -3,7 +3,7 @@ kind: Rollout
 metadata:
   name: rollouts-demo
 spec:
-  replicas: 0
+  replicas: 3
   strategy:
     blueGreen: 
       # activeService specifies the service to update with the new template hash at time of promotion.
