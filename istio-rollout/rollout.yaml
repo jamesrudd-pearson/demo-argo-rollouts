@@ -3,7 +3,7 @@ kind: Rollout
 metadata:
   name: rollouts-demo
 spec:
-  replicas: 0
+  replicas: 2
   strategy:
     canary:
       canaryService: rollouts-demo-canary
@@ -15,7 +15,7 @@ spec:
             routes:
             - primary # At least one route is required
       steps:
-      - setWeight: 50
+      - setWeight: 10
       - pause: {}
   revisionHistoryLimit: 2
   selector:
